@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home / Claims</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="nav">
+    <div class="leftside"><span id=logo>ALPHA HEALTH SYSTEM</span></div>
+    <div class="rightside">
+      <ul class="menu">
+        <li id=current><a href="index.html">HOME / CLAIMS</a></li>
+        <li><a href="patients.html">PATIENTS</a></li>
+        <li><a href="providers.html">PROVIDERS</a></li>
+        <li><a href="facilities.html">FACILITIES</a></li>
+        <li><a href="patientsProviders.html">PATIENTS AND PROVIDERS</a></li>
+        <li><a href="facilitiesProviders.html">FACILITIES AND PROVIDERS</a></li>
+      </ul>
+    </div>
+  </div>
+  <header>
+    <div class="leftside">
+      <form>
+        <input class="button" type="submit" value="SEARCH">
+        <input class="button" type="reset" value="RESET">
+        <ul class="search">
+          <li>
+            <label for="claimID">claimID</label>
+          </li>
+          <li>
+            <input type="number" id="claimID" name="claimID">
+          </li><br>
+          <li>
+            <label for="patientID">patientID</label>
+          </li>
+          <li>
+            <input type="number" id="patientID" name="patientID">
+          </li><br>
+            <label for="provID">provID</label>
+          </li>
+          <li>
+            <input type="number" id="provID" name="provID">
+          </li><br>
+          <li>
+            <label for="dateOfService">dateOfService</label>
+          </li>
+          <li>
+            <input type="date" id="dateOfService" name="dateOfService">
+          </li>
+          <li>
+            <label for="procedure">procedure</label>
+          </li>
+          <li>
+            <input type="text" id="procedure" name="procedure">
+          </li><br>
+          <li>
+            <label for="billedAmount">billedAmount</label>
+          </li>
+          <li>
+            <input type="number" id="billedAmount" name="billedAmount ">
+          </li><br>
+        </ul>
+      </form>
+    </div>
+    <div class="rightside">
+      <div class="content">
+          <table id="table">
+            <thead>
+              <tr>
+                <th>claimID</th>
+                <th>patientID</th>
+                <th>provID</th>
+                <th>facilityID</th>
+                <th>dateOfService</th>
+                <th>Procedure</th>
+                <th>billedAmount</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr id="add">
+                <form>
+                  <td>
+                    <input type="hidden" id="claimID" name="claimID">
+                  </td>
+                  <td>
+                    <input type="number" id="addpatientID" name="addpatientID">
+                  </td>
+                  <td>
+                    <input type="number" id="addprovID" name="addprovID">
+                  </td>
+                  <td>
+                    <input type="number" id="addfacilityID" name="addfacilityID">
+                  </td>
+                  <td>
+                    <input type="date" id="adddateOfService" name="adddateOfService">
+                  </td>
+                  <td>
+                    <input type="text" id="addprocedure" name="addprocedure">
+                  </td>
+                  <td>
+                    <input type="number" id="addbilledAmount" name="addbilledAmount">
+                  </td>
+                  <td>
+                    <input class="button" type="submit" value="ADD">
+                  </td>
+                </form>
+              </tr>
+              <div class="show">
+              <tr>
+              <form>
+                <td><input type="number" id="claimID" name="claimID" value=1 disabled></td>
+                <td><input type="number" id="patientID" name="patientID" value="4"></td>
+                <td><input type="number" id="provID" name="provID" value="2"></td>
+                <td><input type="number" id="facilityID" name="facilityID" value="3"></td>
+                <td><input type="date" id="dateOfService" name="dateOfService" value="2021-01-30"></td>
+                <td><input type="text" id="procedure" name="procedure" value="COVID-19 Vaccination"></td>
+                <td><input type="number" id="billedAmount" name="billedAmount" value="150.00"></td>
+                <td><input class="button" type="submit" value="Edit"></td>
+                <td><input class="button" type="submit" value="Delete"></td>
+              </form>
+              </tr>
+              <tr>
+              <form>
+                <td><input type="number" id="claimID" name="claimID" value=1 disabled></td>
+                <td><input type="number" id="patientID" name="patientID" value="4"></td>
+                <td><input type="number" id="provID" name="provID" value="2"></td>
+                <td><input type="number" id="facilityID" name="facilityID" value="3"></td>
+                <td><input type="date" id="dateOfService" name="dateOfService" value="2021-01-30"></td>
+                <td><input type="text" id="procedure" name="procedure" value="COVID-19 Vaccination"></td>
+                <td><input type="number" id="billedAmount" name="billedAmount" value="150.00"></td>
+                <td><input class="button" type="submit" value="Edit"></td>
+                <td><input class="button" type="submit" value="Delete"></td>
+              </form>
+              </tr>
+              </div>
+            </tbody>
+          </table>
+        </div>
+    </div>
+  </header>
+</body>
+</html>
