@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PatientsProviders</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="nav">
+    <div class="leftside"><span id=logo>ALPHA HEALTH SYSTEM</span></div>
+    <div class="rightside">
+      <ul class="menu">
+        <li><a href="index.html">HOME / CLAIMS</a></li>
+        <li><a href="patients.html">PATIENTS</a></li>
+        <li><a href="providers.html">PROVIDERS</a></li>
+        <li><a href="facilities.html">FACILITIES</a></li>
+        <li id=current><a href="patientsProviders.html">PATIENTS AND PROVIDERS</a></li>
+        <li><a href="facilitiesProviders.html">FACILITIES AND PROVIDERS</a></li>
+      </ul>
+    </div>
+  </div>
+  <header>
+    <div class="leftside">
+      <form>
+        <input class="button" type="submit" value="SEARCH">
+        <input class="button" type="reset" value="RESET">
+        <ul class="search">
+          <li>
+            <label for="patientID">patientID</label>
+          </li>
+          <li>
+            <input type="number" id="patientID" name="patientID">
+          </li><br>
+          <li>
+            <label for="provID">provID</label>
+          </li>
+          <li>
+            <input type="number" id="provID" name="provID">
+          </li><br>
+        </ul>
+      </form>
+    </div>
+    <div class="rightside">
+      <div class="content">
+          <table id="table">
+            <thead>
+              <tr>
+                <th><span class="must">* </span>patientID</th>
+                <th><span class="must">* </span>provID</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr id="add">
+                <form>
+                  <td>
+                    <input type="number" id="addPID" name="addPID">
+                  </td>
+                  <td>
+                    <input type="number" id="addProvID" name="addProvID">
+                  </td>
+                  <td>
+                    <input class="button" type="submit" value="ADD">
+                  </td>
+                </form>
+              </tr>
+              <div class="show">
+              <tr>
+              <form>
+                <td><input type="number" id="patientID" name="patientID" value=2></td>
+                <td><input type="number" id="provID" name="provID" value=3></td>
+                <td><input class="button" type="submit" value="Edit"></td>
+                <td><input class="button" type="submit" value="Delete"></td>
+              </form>
+              </tr>
+              <tr>
+              <form>
+                <td><input type="number" id="patientID" name="patientID" value=2></td>
+                <td><input type="number" id="provID" name="provID" value=3></td>
+                <td><input class="button" type="submit" value="Edit"></td>
+                <td><input class="button" type="submit" value="Delete"></td>
+              </form>
+              </tr>
+              </div>
+            </tbody>
+          </table>
+        </div>
+    </div>
+  </header>
+</body>
+</html>

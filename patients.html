@@ -38,6 +38,12 @@
             </select>
           </li><br>
           <li>
+            <label for="patientID">patientID</label>
+          </li>
+          <li>
+            <input type="number" id="patientID" name="patientID">
+          </li><br>
+          <li>
             <label for="fname">firstName</label>
           </li>
           <li>
@@ -78,6 +84,7 @@
           <table id="table">
             <thead>
               <tr>
+                <th>patientID</th>
                 <th><span class="must">* </span>firstName</th>
                 <th><span class="must">* </span>lastName</th>
                 <th>age</th>
@@ -89,6 +96,9 @@
             <tbody>
               <tr id="add">
                 <form>
+                  <td>
+                    <input type="hidden" id="patientID" name="patientID">
+                  </td>
                   <td>
                     <input type="text" id="addfname" name="addfname">
                   </td>
@@ -118,6 +128,7 @@
               <div class="show">
               <tr>
               <form>
+                <td><input type="number" id="patientID" name="patientID" value=1 disabled></td>
                 <td><input type="text" id="fname" name="fname" value="John"></td>
                 <td><input type="text" id="lname" name="lname" value="Hatten"></td>
                 <td><input type="number" id="age" name="age" value=52></td>
@@ -136,6 +147,7 @@
               </tr>
               <tr>
               <form>
+                <td><input type="number" id="patientID" name="patientID" value=1 disabled></td>
                 <td><input type="text" id="fname" name="fname" value="John"></td>
                 <td><input type="text" id="lname" name="lname" value="Hatten"></td>
                 <td><input type="number" id="age" name="age" value=52></td>
@@ -154,6 +166,7 @@
               </tr>
               <tr>
               <form>
+                <td><input type="number" id="patientID" name="patientID" value=1 disabled></td>
                 <td><input type="text" id="fname" name="fname" value="John"></td>
                 <td><input type="text" id="lname" name="lname" value="Hatten"></td>
                 <td><input type="number" id="age" name="age" value=52></td>
