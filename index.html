@@ -38,6 +38,7 @@
           <li>
             <input type="number" id="patientID" name="patientID">
           </li><br>
+          <li>
             <label for="provID">provID</label>
           </li>
           <li>
@@ -70,12 +71,13 @@
             <thead>
               <tr>
                 <th>claimID</th>
-                <th>patientID</th>
+                <th><span class="must">* </span>patientID</th>
                 <th>provID</th>
                 <th>facilityID</th>
                 <th><span class="must">* </span>dateOfService</th>
                 <th><span class="must">* </span>procedure</th>
                 <th><span class="must">* </span>billedAmount</th>
+                <th><span class="must">* must be filled</span></th>
               </tr>
             </thead>
             <tbody>
@@ -111,11 +113,11 @@
               <tr>
               <form>
                 <td><input type="number" id="claimID" name="claimID" value=1 disabled></td>
-                <td><input type="number" id="patientID" name="patientID" value="4"></td>
-                <td><input type="number" id="provID" name="provID" value="2"></td>
-                <td><input type="number" id="facilityID" name="facilityID" value="3"></td>
+                <td><input type="number" id="patientID" name="patientID" value="2"></td>
+                <td><input type="text" id="provID" name="provID" value="2"></td>
+                <td><input type="text" id="facilityID" name="facilityID" value="NULL"></td>
                 <td><input type="date" id="dateOfService" name="dateOfService" value="2021-01-30"></td>
-                <td><input type="text" id="procedure" name="procedure" value="COVID-19 Vaccination"></td>
+                <td><input type="text" id="procedure" name="procedure" value="tele visit"></td>
                 <td><input type="number" id="billedAmount" name="billedAmount" value="150.00"></td>
                 <td><input class="button" type="submit" value="Edit"></td>
                 <td><input class="button" type="submit" value="Delete"></td>
@@ -125,8 +127,8 @@
               <form>
                 <td><input type="number" id="claimID" name="claimID" value=1 disabled></td>
                 <td><input type="number" id="patientID" name="patientID" value="4"></td>
-                <td><input type="number" id="provID" name="provID" value="2"></td>
-                <td><input type="number" id="facilityID" name="facilityID" value="3"></td>
+                <td><input type="text" id="provID" name="provID" value="NULL"></td>
+                <td><input type="text" id="facilityID" name="facilityID" value="3"></td>
                 <td><input type="date" id="dateOfService" name="dateOfService" value="2021-01-30"></td>
                 <td><input type="text" id="procedure" name="procedure" value="COVID-19 Vaccination"></td>
                 <td><input type="number" id="billedAmount" name="billedAmount" value="150.00"></td>

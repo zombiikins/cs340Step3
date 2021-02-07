@@ -71,7 +71,7 @@ form {
   list-style: none;
   color: rgb(0, 0, 0);
   overflow-y: scroll;
-  overflow-x: hidden;
+  overflow-x: auto;
 }
 
 .search li{
@@ -97,6 +97,7 @@ input{
   text-decoration: none;
   cursor: pointer;
   margin: 5px;
+  font-size: 0.75em;
 }
 
 .button:hover{
