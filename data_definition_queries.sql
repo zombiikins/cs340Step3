@@ -64,7 +64,8 @@ CREATE TABLE `Claims` (
     `billedAmount` decimal(6,2) NOT NULL DEFAULT 0.00,
     PRIMARY KEY(`claimID`),
     FOREIGN KEY(`patientID`)
-        REFERENCES `Patients`(`patientID`),
+        REFERENCES `Patients`(`patientID`)
+        ON DELETE CASCADE,
     FOREIGN KEY(`patProvID`)
         REFERENCES `PatientsProviders`(`patProvID`) 
         ON DELETE SET NULL ON UPDATE CASCADE,
