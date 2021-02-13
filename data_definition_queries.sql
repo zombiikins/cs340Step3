@@ -57,24 +57,20 @@ CREATE TABLE `ProvidersFacilities` (
 CREATE TABLE `Claims` (
     `claimID` int AUTO_INCREMENT NOT NULL,
     `patientID` smallint NOT NULL,
-    `provID` smallint,
-    `facilityID` tinyint,
-    `patProvID` smallint,
-    `provFacID` smallint,
+    `patProvID` smallint DEFAULT NULL,
+    `provFacID` smallint DEFAULT NULL,
     `dateOfService` date NOT NULL,
     `procedureDesc` varchar(50) NOT NULL,
     `billedAmount` decimal(6,2) NOT NULL DEFAULT 0.00,
     PRIMARY KEY(`claimID`),
     FOREIGN KEY(`patientID`)
         REFERENCES `Patients`(`patientID`),
-    FOREIGN KEY(`provID`)
-        REFERENCES `Providers`(`provID`),
-    FOREIGN KEY(`facilityID`)
-        REFERENCES `Facilities`(`facilityID`),
     FOREIGN KEY(`patProvID`)
-        REFERENCES `PatientsProviders`(`patProvID`) on delete cascade on update cascade,
+        REFERENCES `PatientsProviders`(`patProvID`) 
+        ON DELETE SET NULL ON UPDATE CASCADE,
     FOREIGN KEY(`provFacID`)
-        REFERENCES `ProvidersFacilities`(`provFacID`) on delete cascade on update cascade
+        REFERENCES `ProvidersFacilities`(`provFacID`)
+        ON DELETE SET NULL ON UPDATE CASCADE
 );
 
 
@@ -114,7 +110,7 @@ INSERT INTO `ProvidersFacilities` (`provID`, `facilityID`) VALUES
 
 
 INSERT INTO `Claims` (`patientID`, `provID`, `facilityID`, `patProvID`, `provFacID`, `dateOfService`, `procedureDesc`, `billedAmount`) VALUES
-(4, 1, 1, 2, 1, '2021-01-02', 'TDAP Vaccination', 20.00),
-(3, 2, 3, 3, 5, '2020-11-27', 'E&M Level 3', 125.00),
-(2, 5, 1, 5, 2, '2020-12-06', 'E&M Level 4', 150.00),
-(2, 5, 1, 5, 2, '2020-12-19', 'Biopsy', 750.00);
+(4, 2, 1, '2021-01-02', 'TDAP Vaccination', 20.00),
+(3, 3, 5, '2020-11-27', 'E&M Level 3', 125.00),
+(2, 5, 2, '2020-12-06', 'E&M Level 4', 150.00),
+(2, 5, 2, '2020-12-19', 'Biopsy', 750.00);

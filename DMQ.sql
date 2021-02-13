@@ -7,7 +7,7 @@ SELECT * FROM PatientsProviders;
 SELECT * FROM ProvidersFacilities;
 
 -- add a new row for all tables
-INSERT INTO `Claims` (`patientID`, `provID`, `facilityID`, `patProvID`, `provFacID`, `dateOfService`, `procedureDesc`, `billedAmount`) VALUES
+INSERT INTO `Claims` (`patientID`, `patProvID`, `provFacID`, `dateOfService`, `procedureDesc`, `billedAmount`) VALUES
   (input[1], input[2], input[3], input[4], input[5], input[6], input[7], input[8]);
 INSERT INTO `Patients` (`firstName`, `lastName`, `age`, `gender`, `phonenumber`, `email`) VALUES
   (input[1], input[2], input[3], input[4], input[5], input[6]);
@@ -21,7 +21,7 @@ INSERT INTO `ProvidersFacilities` (`provID`, `facilityID`) VALUES
   (input[1], input[2]);
 
 -- edit a row
-UPDATE Claims SET patientID = input[1], provID = input[2], facilityID = input[3], patProvID = input[4],
+UPDATE Claims SET patientID = input[1], patProvID = input[4],
   provFacID = input[5], dateOfService = input[6], procedureDesc = input[7], billedAmount = input[8]
   WHERE claimID = input[0];
 UPDATE Patients SET firstName = input[1], lastName = input[2], age = input[3], gender = input[4],
